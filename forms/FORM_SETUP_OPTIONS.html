@@ -1,0 +1,50 @@
+<!-- OPTION 2A: Using FormSubmit.co (No backend needed) -->
+<!--
+1. Replace the form action in index.html with:
+   action="https://formsubmit.co/your-email@example.com"
+   
+2. FormSubmit features:
+   - No PHP or backend required
+   - Free forever
+   - Spam protection
+   - Auto-response emails
+   - Custom redirect page
+   
+3. Example form configuration:
+-->
+
+<!-- In index.html, replace the form tag with: -->
+<form action="https://formsubmit.co/your-email@example.com" method="POST" class="contact-form">
+  <!-- Add these hidden fields for configuration -->
+  <input type="hidden" name="_subject" value="New contact from Tynex website">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" style="display:none">
+  <input type="hidden" name="_template" value="table">
+  
+  <!-- Your existing form fields work as-is -->
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <input type="tel" name="phone">
+  <input type="text" name="subject" required>
+  <textarea name="message" required></textarea>
+  
+  <button type="submit">Send Message</button>
+</form>
+
+
+<!-- OPTION 2B: Using Formspree.io -->
+<!--
+1. Sign up at formspree.io (free plan: 50 submissions/month)
+2. Create a form and get your endpoint
+3. Replace form action with: action="https://formspree.io/f/YOUR_FORM_ID"
+-->
+
+
+<!-- OPTION 3: Using Netlify Forms (if hosting on Netlify) -->
+<!--
+1. Add netlify attribute to form tag:
+   <form name="contact" method="POST" data-netlify="true">
+2. Add hidden input:
+   <input type="hidden" name="form-name" value="contact">
+3. Deploy to Netlify - forms will work automatically
+-->
